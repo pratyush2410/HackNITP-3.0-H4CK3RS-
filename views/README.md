@@ -1,1 +1,2 @@
-just for fun
+folder to store the ejs files
+
