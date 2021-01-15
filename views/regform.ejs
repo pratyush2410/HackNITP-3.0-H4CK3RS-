@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Extrainfo for Profile</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="regform.css"/>
+</head>
+<body class="form-v10" background="bg.jpg">
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail" action="#" method="post" id="myform">
+				<div class="form-left">
+					<h2>General Infomation</h2>
+					<div class="form-row">
+						<select name="title">
+						    <option class="option" value="Mister">Mr.</option>
+						    <option class="option" value="Miss">Ms.</option>
+						    <option class="option" value="Mistress">Mrs.</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="first_name" id="first_name" class="input-text" placeholder="First Name" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="last_name" id="last_name" class="input-text" placeholder="Last Name" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<label for="gender">Gender</label>
+						<select name="title">
+						    <option class="option" value="Male">Male</option>
+						    <option class="option" value="Female">Female</option>
+						    <option class="option" value="Transgender">Transgender</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<div class="form-row">
+						<label for="birthday">Date of Birth</label>
+						  <input type="date" id="birthday" name="birthday">
+					</div>
+					
+					<div class="form-row">
+						  <input type="password" id="password" name="password" placeholder="Password">
+					</div>
+					<div class="form-row">
+						<input type="password" id="password" name="password2" placeholder="Re-enter Password">
+				  </div>
+				</div>
+				<div class="form-right">
+					<h2>Contact Details</h2>
+					<div class="form-row">
+						<input type="text" name="street" class="street" id="street" placeholder="House No./Flat No./Apartment Name/Street" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="additional" class="additional" id="additional" placeholder="Area Name" required>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="zip" class="zip" id="zip" placeholder="Postal code" required>
+						</div>
+						<div class="form-row form-row-2">
+							<select name="place">
+							    <option value="place">Place</option>
+							    <option value="Street">Street</option>
+							    <option value="District">District</option>
+							    <option value="City">City</option>
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+					</div>
+					<div class="form-row">
+						<select name="country">
+						    <option value="country">Country</option>
+						    <option value="Vietnam">Vietnam</option>
+						    <option value="Malaysia">Malaysia</option>
+						    <option value="India">India</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="code" class="code" id="code" placeholder="(+91)" readonly>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="phone" class="phone" id="phone" placeholder="Phone Number" required>
+						</div>
+					</div>
+					<div class="form-row form-row-3">
+						<input type="text" name="Email" class="Email" id="Email" placeholder="Email ID" required>
+					</div>
+				
+					<div class="form-checkbox">
+						<label class="container"><p>I do accept the <a href="#" class="text">Terms and Conditions</a> of your site.</p>
+						  	<input type="checkbox" name="checkbox">
+						  	<span class="checkmark"></span>
+						</label>
+					</div>
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="Register Profile">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
