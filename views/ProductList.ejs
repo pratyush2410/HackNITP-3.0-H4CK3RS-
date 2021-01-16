@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ProductList.css">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Landing page</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+<!-------------------------------------------------- Bootstrap core CSS --------------------------------------------------------------->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+<!------------------------------------------------------NAVBAR COLLAPSABLE-------------------------------------------------------------->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">Study Adda</a>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+      <button class="btn btn-primary" type="button">Translate</button>
+
+  </div>
+</nav>
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-gradient">
+  <div class="container-fluid">
+    <button class="openbtn btn btn-outline-light" type="button" onclick="openNav()">☰</button>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Categories  |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Top Deals  |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Suggestions For You  |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">E -BOOKS</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#"><button class="btn" type="button"><img src="https://img.icons8.com/fluent-systems-filled/24/ffffff/data-setting.png"/></button></a>
+    </ul>
+  </div>
+</nav>
+
+<!--------------------------------------------------------------main-------------------------------------------------------------------->
+
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Welcome 2c4b614976</h1>
+        <p class="lead text-muted">In Need of Books.Explore for what you need!</p>
+      </div>
+    </div>
+  </section>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+    <div class="row">
+      <div class="col col-md-3">
+        <img class="img-fluid list-img" src="DSC_0002.JPG" class="img-thumbnail" alt="...">
+      </div>
+        <div class="col col-md-6">
+        
+<div class="row">
+  <h1>Product Name</h1>
+<h3>Product Price</h3>
+<p><button class="btn btn-success">Ratings</button></p>   
+</div>
+
+      </div>
+      <div class="col col-md-2">        
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">View Details</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="details">
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img class="detail-img img-fluid d-block w-100 " src=DSC_0002.JPG alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img class="detail-img img-fluid d-block w-100 " src=DSC_0002.JPG alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="detail-img img-fluid d-block w-100 " src=DSC_0002.JPG alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+          <hr>
+          <h3>Product Name</h3>
+          <p>Product Details<br>
+            Shashwat <br>
+            Pratyush<br>
+            Lakhan<br>
+            Kshitiz<br>
+            Shashwat <br>
+            Pratyush<br>
+            Lakhan<br>
+            Kshitiz<br>
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col col-md-3">
+        <img class="img-fluid list-img" src="DSC_0002.JPG" class="img-thumbnail" alt="...">
+      </div>
+        <div class="col col-md-6">
+        
+<div class="row">
+  <h1>Product Name</h1>
+<h3>Product Price</h3>
+<p><button class="btn btn-success">Ratings</button></p>   
+</div>
+
+      </div>
+      <div class="col col-md-2">        
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">View Details</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="details">
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img class="detail-img img-fluid d-block w-100 " src=DSC_0002.JPG alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img class="detail-img img-fluid d-block w-100 " src=DSC_0002.JPG alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="detail-img img-fluid d-block w-100 " src=DSC_0002.JPG alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+          <hr>
+          <h3>Product Name</h3>
+          <p>Product Details<br>
+            Shashwat <br>
+            Pratyush<br>
+            Lakhan<br>
+            Kshitiz<br>
+            Shashwat <br>
+            Pratyush<br>
+            Lakhan<br>
+            Kshitiz<br>
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col col-md-3">
+        <img class="img-fluid list-img" src="DSC_0002.JPG" class="img-thumbnail" alt="...">
+      </div>
+        <div class="col col-md-6">
+        
+<div class="row">
+  <h1>Product Name</h1>
+<h3>Product Price</h3>
+<p><button class="btn btn-success">Ratings</button></p>   
+</div>
+
+      </div>
+      <div class="col col-md-2">        
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">View Details</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="details">
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img class="detail-img img-fluid d-block w-100 " src=DSC_0002.JPG alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img class="detail-img img-fluid d-block w-100 " src=DSC_0002.JPG alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="detail-img img-fluid d-block w-100 " src=DSC_0002.JPG alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+          <hr>
+          <h3>Product Name</h3>
+          <p>Product Details<br>
+            Shashwat <br>
+            Pratyush<br>
+            Lakhan<br>
+            Kshitiz<br>
+            Shashwat <br>
+            Pratyush<br>
+            Lakhan<br>
+            Kshitiz<br>
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col col-md-3">
+        <img class="img-fluid list-img" src="DSC_0002.JPG" class="img-thumbnail" alt="...">
+      </div>
+        <div class="col col-md-6">
+        
+<div class="row">
+  <h1>Product Name</h1>
+<h3>Product Price</h3>
+<p><button class="btn btn-success">Ratings</button></p>   
+</div>
+
+      </div>
+      <div class="col col-md-2">        
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">View Details</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="details">
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img class="detail-img img-fluid d-block w-100 " src=DSC_0002.JPG alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img class="detail-img img-fluid d-block w-100 " src=DSC_0002.JPG alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="detail-img img-fluid d-block w-100 " src=DSC_0002.JPG alt="">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+          <hr>
+          <h3>Product Name</h3>
+          <p>Product Details<br>
+            Shashwat <br>
+            Pratyush<br>
+            Lakhan<br>
+            Kshitiz<br>
+            Shashwat <br>
+            Pratyush<br>
+            Lakhan<br>
+            Kshitiz<br>
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </li>
+ 
+  </ul>
+
+</main>
+<!------------------------------------------------------------Log OUt------------------------------------------------------------------->
+
+<div class="log-out"><button class="btn btn-primary twinbtn">Log Out</button></div>
+
+<!---------------------------------------------------------------FOOTER----------------------------------------------------------------->
+<div class="bg-danger bg-gradient scroll-link"> 
+  <button class=" btn btn-outline-light btn-gradient">
+    <a class="scroll-link-btn-anc" href="#">Previous</a>
+  </button>
+  <button class=" btn btn-outline-light btn-gradient">
+    <a class="scroll-link-btn-anc" href="#">Back to top</a>
+  </button>
+  <button class=" btn btn-outline-light btn-gradient">
+    <a class="scroll-link-btn-anc" href="#">Next</a>
+  </button>
+</div>
+
+<footer class="text-muted py-5 bg-dark bg-gradient">
+  <div class="container">
+    <p class="float-end mb-1">
+      
+    </p>
+    <p class="mb-1 footer-text">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0 footer-text">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+
+  <!---------------------------------------------------------------JAVASCRIPTS---------------------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="ProductList.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
