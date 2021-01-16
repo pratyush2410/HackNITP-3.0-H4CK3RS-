@@ -1,10 +1,15 @@
-# HackNITP-3.0-H4CK3RS-
 
-<h1 align="center">
-  HackNITP-3.0
+
+
+  
+  <h1 align="center" border-left="5px">
+    <span class="avatar" >
+  <img src="https://github.com/github.png" width="25px"></span> HackNITP-3.0
   <br>
   H4CK3RS
 </h1>
+
+ 
 
 <p align="center">
 
