@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RentPage.css">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Landing page</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+<!-------------------------------------------------- Bootstrap core CSS --------------------------------------------------------------->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+<!------------------------------------------------------NAVBAR COLLAPSABLE-------------------------------------------------------------->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">Study Adda</a>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+      <button class="btn btn-primary" type="button">Translate</button>
+
+  </div>
+</nav>
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-gradient">
+  <div class="container-fluid">
+    <button class="openbtn btn btn-outline-light" type="button" onclick="openNav()">☰</button>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Categories  |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Top Deals  |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Suggestions For You  |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">E -BOOKS</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#"><button class="btn" type="button"><img src="https://img.icons8.com/fluent-systems-filled/24/ffffff/data-setting.png"/></button></a>
+    </ul>
+  </div>
+</nav>
+
+<!--------------------------------------------------------------main-------------------------------------------------------------------->
+
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Welcome 2c4b614976</h1>
+        <p class="lead text-muted">Rent your books to someone who might need them!!!</p>
+        <p>
+          <a href="#"><button id="myBtn" class="add btn btn-primary"><h1>+</h1></button></a>
+          <a href="#"><button id="myBtn2" class="add btn btn-secondary"><h1>-</h1></button></a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="myModal2" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <span class="close2">&times;</span>
+        <h2>Take your books off</h2>
+      </div>
+      <div class="modal-body">
+      
+        <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Book Name -1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="row">
+          <div class="col">
+            Here we put all the details of the project.
+          </div>
+          <div class="col">
+          <img src="#" alt="This will be the image of the product.Preferrably 1st image.">
+          </div>
+          <div class="log-out">
+            <button type="submit" class="btn btn-primary">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Book Name -2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="row">
+          <div class="col">
+            Here we put all the details of the project.
+          </div>
+          <div class="col">
+          <img src="#" alt="This will be the image of the product.Preferrably 1st image.">
+          </div>
+          <div class="log-out">
+            <button type="submit" class="btn btn-primary">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Book Name -3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="row">
+          <div class="col">
+            Here we put all the details of the project.
+          </div>
+          <div class="col">
+          <img src="#" alt="This will be the image of the product.Preferrably 1st image.">
+          </div>
+          <div class="log-out">
+            <button type="submit" class="btn btn-primary">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>        
+
+      </div>
+      <div class="modal-footer bg-dark">
+        <p>All these products are trusted quality of Study Adda.</p> 
+      </div>
+    </div>  
+  </div>
+
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <span class="close">&times;</span>
+        <h2>Add Books to Study Adda</h2>
+      </div>
+      <div class="modal-body bg-gradient">
+       <form action="#">
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Book Name" aria-label="First name">
+          </div>
+          <div class="col">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Book Category</option>
+              <option value="Mathematics">Mathematics</option>
+              <option value="Physics">Physics</option>
+              <option value="Chemistry">Chemistry</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Romance">Romance</option>
+              <option value="Sci-Fi">Sci-Fi</option>
+              <option value="Horror">Horror</option>
+              <option value="Fiction">Fiction</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <label for="formFile" class="form-label">Image File-1</label>
+              <input class="form-control" type="file" id="formFile">
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="formFile" class="form-label">Image File-2</label>
+              <input class="form-control" type="file" id="formFile">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-md-6">
+            <div class="input-group mb-3">
+              <span class="input-group-text">Setprice(per Month)</span>
+              <input type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-md-6">
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="col col-md-6">
+          <div class="input-group mb-3">
+            <span class="input-group-text">No. of Months Old</span>
+            <input type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+          </div>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">I agree to the terms and conditions as mentioned by Study Adda.</label>
+        </div>
+<div class="log-out">
+  <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+       </form>
+      </div>
+      <div class="modal-footer bg-dark">
+        <p>All these products are trusted quality of Study Adda.</p> 
+      </div>
+    </div>  
+  </div>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <h1>YOUR RENTALS</h1>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+  
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+  
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <h1>CURRENT CUSTOMERS</h1>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+  
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    
+        <div class="container">
+          <h1>YOUR STATS</h1>
+
+        </div>
+     
+            </div>
+          </div>
+        </div>
+
+</main>
+<!------------------------------------------------------------Log OUt------------------------------------------------------------------->
+
+<div class="log-out"><button class="btn btn-primary twinbtn">Log Out</button></div>
+
+<!---------------------------------------------------------------FOOTER----------------------------------------------------------------->
+<div class="bg-danger bg-gradient scroll-link"> 
+  <button class=" btn btn-outline-light btn-gradient">
+    <a class="scroll-link-btn-anc" href="#">Previous</a>
+  </button>
+  <button class=" btn btn-outline-light btn-gradient">
+    <a class="scroll-link-btn-anc" href="#">Back to top</a>
+  </button>
+  <button class=" btn btn-outline-light btn-gradient">
+    <a class="scroll-link-btn-anc" href="#">Next</a>
+  </button>
+</div>
+
+<footer class="text-muted py-5 bg-dark bg-gradient">
+  <div class="container">
+    <p class="float-end mb-1">
+      
+    </p>
+    <p class="mb-1 footer-text">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0 footer-text">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+
+  <!---------------------------------------------------------------JAVASCRIPTS---------------------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="RentPage.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
