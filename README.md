@@ -6,7 +6,7 @@
     <span class="avatar" >
   <img align="right" alt="GIF" height="60px" src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" /> HackNITP-3.0
   <br>
-  H4CK3RS
+  H4CK3RS<img src="https://media.giphy.com/media/9S3FMee8gGGRBhZsA7/giphy.gif" width="36px">
 </h1>
 
  
@@ -33,7 +33,7 @@
 This site provides a way to help the in terms of `buying` and `selling` books at rents lower than `Market Prices` etc.
 
 
-## 🚀 Demo 
+## <img src="https://github.com/LakhanKumawat/LakhanKumawat/blob/master/Assets/Rocket.gif" width="22px"> Demo 
 **Watch our progress**<br><br>
 <img align="right" src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=pratyush2410&repo=HackNITP-3.0-H4CK3RS-&countColorcountColor&countColor=%237B1E7B"/>
 <a href="https://pratyush2410.github.io/HackNITP-3.0-H4CK3RS-" target="blank">
