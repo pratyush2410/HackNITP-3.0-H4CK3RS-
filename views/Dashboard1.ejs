@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Dashboard_Styles.css">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Landing page</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+<!-------------------------------------------------- Bootstrap core CSS --------------------------------------------------------------->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<style media="screen">
+  .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: rgba(17, 17, 17, 0);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+    }
+
+    .openbtn:hover {
+      background-color: #444;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+    .twinbtn{
+      width : 30%;
+    }
+
+    .scroll-link{
+      text-align: center;
+      font-size: 150%;
+      padding: 1%;
+    }
+
+    .scroll-link-btn-anc{
+      text-emphasis: none;
+      color: blanchedalmond;
+      text-decoration: none;
+    }
+    .footer-text{
+      text-align: center;
+      color: whitesmoke;
+    }
+    .log-out{
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2%;
+    }
+    .add{
+        height:70px;
+        width:70px;
+        border-radius: 100px;
+        border: cornsilk;
+        text-align: center;
+        vertical-align: middle;
+        justify-content: center;
+
+    }
+
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #ffaeaeee;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close2 {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .close2:hover,
+  .close2:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #0f8b8f;
+    color: white;
+  }
+
+  .modal-body {padding: 2px 16px;}
+
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #0f8b8f;
+    color: white;
+  }
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+    }
+
+  .list-img{
+    height: 200px;
+    width: 200px;
+  }
+
+  .detail-img{
+    height: 400px;
+    width: 460px;
+    align-content: center;
+  }
+
+  </style>
+</head>
+
+
+<body>
+
+<!------------------------------------------------------NAVBAR COLLAPSABLE-------------------------------------------------------------->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img width="50px" height="40px" src="/icon/Logo.png">  BookXchange</a>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+      <button class="btn btn-primary" type="button">Translate</button>
+
+  </div>
+</nav>
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-gradient">
+  <div class="container-fluid">
+    <button class="openbtn btn btn-outline-light" type="button" onclick="openNav()">☰</button>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/categories/Horror" >Horror  |</a>
+      </li>
+      <li class="nav-item">
+            <a class="nav-link" href="/categories/Sci-Fi">Sci-Fi |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories/Adventure">Adventure |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories/Romance">Romance |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories/Mathematics">Mathematics |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories/Chemistry">Chemistry |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories/Physics">Physics </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="editProfile"><button class="btn" type="button"><img src="https://img.icons8.com/fluent-systems-filled/24/ffffff/data-setting.png"/></button></a>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="wallet"><button class="btn" type="button">Cart</button></a>
+    </ul>
+  </div>
+</nav>
+
+<!--------------------------------------------------------------main-------------------------------------------------------------------->
+
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Welcome <%=name%></h1>
+        <p class="lead text-muted">Connect through books!!!</p>
+        <p>
+          <a href="/rentedBooks" class="btn btn-primary twinbtn">Rent</a>
+          <a href="/browse" class="btn btn-secondary twinbtn">Purchase</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <h1>TOP DEALS FOR YOU</h1>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <% books.forEach(function(book) { %>
+        <div class="col">
+          <div class="card shadow-sm">
+              <img src="data:image1/<%=book.image1.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+
+            <div class="card-body">
+              <h3><%=book.name%></h3>
+              <p class="card-text"><%=book.description%></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">More Details</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="details">
+                            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                              <ol class="carousel-indicators">
+                                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+                                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+                                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+                              </ol>
+                              <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                  <img class="detail-img img-fluid d-block w-100" src="data:image1/<%=book.image1.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+                  
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                  <img class="detail-img img-fluid d-block w-100" src="data:image2/<%=book.image2.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+                  
+                                </div>
+                                <div class="carousel-item">
+                                <img class="detail-img img-fluid d-block w-100" src="data:image3/<%=book.image3.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+                  
+                                </div>
+                              </div>
+                              <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </a>
+                              <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </a>
+                            </div>
+                            <hr>
+                            <h3><%=book.name%></h3>
+                            <p>Description<br>
+                              <%=book.description%><br>
+                            </p>
+                            <h3>Issue Rate (Per month): ₹<%=book.setPrice%></h3>
+                            <h3>Category: <%=book.Category%></h3>
+                            <h3>Age of the book: <%=book.age%></h3>
+                            <h3>Publication Year: <%=book.publicationYear%></h3>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-dark">Add to Cart</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        	<% }) %>
+
+        </div>
+      </div>
+    </div>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <h1>DEALS NEAR YOU</h1>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <% books.forEach(function(book) { %>
+          <div class="col">
+            <div class="card shadow-sm">
+                <img src="data:image1/<%=book.image1.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+
+              <div class="card-body">
+                <p class="card-text"><%=book.description%></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          	<% }) %>
+
+          </div>
+        </div>
+      </div>
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <h1>RECENT SUGGESTIONS</h1>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <% books.forEach(function(book) { %>
+            <div class="col">
+              <div class="card shadow-sm">
+                  <img src="data:image1/<%=book.image1.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+
+                <div class="card-body">
+                  <p class="card-text"><%=book.description%></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">More Details</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="details">
+                                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                  <ol class="carousel-indicators">
+                                    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+                                  </ol>
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="10000">
+                                      <img class="detail-img img-fluid d-block w-100" src="data:image1/<%=book.image1.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+                      
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="2000">
+                                      <img class="detail-img img-fluid d-block w-100" src="data:image2/<%=book.image2.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+                      
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img class="detail-img img-fluid d-block w-100" src="data:image3/<%=book.image3.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+                      
+                                    </div>
+                                  </div>
+                                  <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                  </a>
+                                  <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                  </a>
+                                </div>
+                                <hr>
+                                <h3><%=book.name%></h3>
+                                <p>Description<br>
+                                  <%=book.description%><br>
+                                </p>
+                                <h3>Issue Rate (Per month): ₹<%=book.setPrice%></h3>
+                                <h3>Category: <%=book.Category%></h3>
+                                <h3>Age of the book: <%=book.age%></h3>
+                                <h3>Publication Year: <%=book.publicationYear%></h3>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-dark">Add to Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            	<% }) %>
+
+          </div>
+        </div>
+</div>
+</main>
+<!------------------------------------------------------------Log OUt------------------------------------------------------------------->
+
+<div class="log-out"><button class="btn btn-primary twinbtn">Log Out</button></div>
+
+<!---------------------------------------------------------------FOOTER----------------------------------------------------------------->
+<div class="bg-danger bg-gradient scroll-link">
+  <button class=" btn btn-outline-light btn-gradient">
+    <a class="scroll-link-btn-anc" href="#">Back to top</a>
+  </button>
+</div>
+
+<footer class="text-muted py-5 bg-dark bg-gradient">
+  <div class="container">
+    <p class="float-end mb-1">
+
+    </p>
+    <p class="mb-1 footer-text">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0 footer-text">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+
+  <!---------------------------------------------------------------JAVASCRIPTS---------------------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="Dashboard_Design.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+  
+        var modal = document.getElementById("myModal");
+        var modal2 = document.getElementById("myModal2");
+  
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+      var btn2 = document.getElementById("myBtn2");
+  
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      var span2 = document.getElementsByClassName("close2")[0];
+      // When the user clicks the button, open the modal
+  
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      btn2.onclick = function() {
+        modal2.style.display = "block";
+      }
+  
+      // When the user clicks on <span> (x), close the modal
+  
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      span2.onclick = function() {
+        modal2.style.display = "none";
+      }
+  
+      </script>
+</body>
+</html>

@@ -9,6 +9,8 @@ const mongoose = require('mongoose');
 //const encrypt = require('mongoose-encryption');
 const app = express();
 const router = express.Router();
+var Razorpay=require("razorpay");
+const { userInfo } = require("os");
 var fs = require('fs');
 var path = require('path');
 var multer = require('multer');
@@ -18,6 +20,12 @@ const session= require("express-session");
 const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
 
+
+let instance = new Razorpay({
+  key_id: process.env.KEY_ID, // your `KEY_ID`
+  key_secret:process.env.KEY_SECRET // your `KEY_SECRET`
+});
+//console.log(process.env.API_KEY);
 
 //console.log(process.env.API_KEY);
 
@@ -95,17 +103,39 @@ const productSchema= new mongoose.Schema({
 
 
 const userSchema=new mongoose.Schema({
-   email: String,
-   password: String,
-   name: String,
-   contact:Number,
-   address: String,
-   rentedBooks:[productSchema],
+   // email: String,
+   // password: String,
+   // name: String,
+   // contact:Number,
+   // address: String,
+   // rentedBooks:[productSchema],
+   fname:String,
+   lname:String,
+    email: String,
+    password: String,
+    city:String,
+    state:String,
+    postalCode:String,
+    name: String,
+    contact:Number,
+    address: String,
+    rentedBooks:[productSchema],
+    cartBooks:[productSchema],
 });
 
 
 
 
+const transactionSchema = new mongoose.Schema({
+   ProductId:String,
+   UserId:String,
+   OrderId:String,
+   PaymentId:String,
+   Signature:String,
+});
+
+
+const Transaction = new mongoose.model("Transcation",transactionSchema);
 
 
 
@@ -151,8 +181,25 @@ const Product = new mongoose.model("Product",productSchema);
 
 //TODO
 app.get("/",function (req,res) {
-  res.render("home2");
+  Product.find({}, (err, books) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+          books=books.slice(0,3);
+        res.render("home2",{books:books});
+        }
+});
+
 })
+
+app.get("/success",function(req,res){
+  if (req.isAuthenticated()){
+  res.render("success");
+}else {
+  res.redirect("/login");
+}
+});
 
 
 app.get("/login",function (req,res) {
@@ -165,7 +212,7 @@ app.get("/register",function (req,res) {
 
 app.get("/wallet",function (req,res) {
   if (req.isAuthenticated()){
-  res.render("walletPage");
+  res.render("walletPage",{cartBooks:req.user.cartBooks });
 }
 else {
   res.redirect("login");
@@ -199,6 +246,42 @@ app.get("/browse",function (req,res) {
 
 })
 
+app.post("/addCart",function (req,res) {
+  if (req.isAuthenticated()){
+    //console.log(req.body.button);
+    Product.findOne({_id: req.body.button}, (err, book) => {
+          if (err) {
+              console.log(err);
+          }
+          else {
+            req.user.cartBooks.push(book);
+            req.user.save();
+            res.redirect("/wallet");
+          }
+  });
+  }
+  else {
+    res.redirect("/login");
+  }
+})
+
+
+
+
+
+
+app.get("/categories/:Category",function (req,res) {
+  Product.find({Category: req.params.Category}, (err, books) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.render("productList",{books:books});
+        }
+});
+})
+
+
 
 app.get("/rentedBooks",function (req,res) {
   if (req.isAuthenticated()){
@@ -207,7 +290,7 @@ app.get("/rentedBooks",function (req,res) {
               console.log(err);
           }
           else {
-              res.render('RentPage2', {name: req.user.name, books:books});
+              res.render('RentPage2', {name: req.user.fname, books:books});
           }
   });
 }
@@ -215,6 +298,21 @@ app.get("/rentedBooks",function (req,res) {
     res.redirect("/login");
   }
 });
+
+
+
+
+app.post("/search",function (req,res) {
+  Product.find({name: req.body.search}, (err, books) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+          res.render("productList",{books:books});
+        }
+});
+})
+
 
 
 
@@ -281,8 +379,58 @@ app.post('/rentedBooks', (req, res, next) => {
 
 
 
+app.get("/payment",function(req,res){
+ if(req.isAuthenticated()){
+  res.render("checkout",{
+    fname:req.body.fname,
+    lname:req.body.lname,
+    username:req.body.username,
+    address:req.body.address
+  });
 
 
+}else {
+  res.redirect("/login");
+}
+})
+
+
+
+// RAZORPAY
+app.post("/api/payment/order",(req,res)=>{
+  if (req.isAuthenticated()){
+  params=req.body;
+  instance.orders.create(params).then((data) => {
+         res.send({"sub":data,"status":"success"});
+  }).catch((error) => {
+         res.send({"sub":error,"status":"failed"});
+
+  });
+}else {
+  res.redirect("/login");
+}
+  });
+
+
+
+
+  app.post("/api/payment/verify",(req,res)=>{
+    if (req.isAuthenticated()){
+  body=req.body.razorpay_order_id + "|" + req.body.razorpay_payment_id;
+  var crypto = require("crypto");
+  var expectedSignature = crypto.createHmac('sha256', key_secret)
+                                  .update(body.toString())
+                                  .digest('hex');
+                                  console.log("sig"+req.body.razorpay_signature);
+                                  console.log("sig"+expectedSignature);
+  var response = {"status":"failure"}
+  if(expectedSignature === req.body.razorpay_signature)
+   response={"status":"success"}
+      res.send(response);
+    }else {
+      res.redirect("/login");
+    }
+  });
 
 
 app.post("/register",function (req,res) {
@@ -290,9 +438,13 @@ app.post("/register",function (req,res) {
     User.register(
       {
         username: req.body.username,
-        name:req.body.first_name,
+        fname:req.body.first_name,
+        lname:req.body.last_name,
         contact: req.body.phone,
         address: req.body.street,
+        city: req.body.additional,
+        state: req.body.state,
+        postalCode: req.body.zip,
        },
       req.body.password,
       function (err,user) {
@@ -341,7 +493,16 @@ app.post("/login",function (req,res) {
 
 app.get("/dashboard",function (req,res) {
   if(req.isAuthenticated()){
-        res.render("dashboard",{name: req.user.name});
+    Product.find({}, (err, books) => {
+          if (err) {
+              console.log(err);
+          }
+          else {
+            books=books.slice(0,3);
+          res.render("dashboard1",{name: req.user.fname,books:books});
+          }
+  });
+
         // console.log(req.user.username);
         // console.log(req.user);
       // User.findOne({username: req.user.username}, function (err,foundUser) {
@@ -376,6 +537,8 @@ app.get("/logout",function (req,res) {
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
+
+
 
 
 

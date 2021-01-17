@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="H4ck3rs">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>BOOK ADDA</title>
+
+    <link rel="icon" href="/icon/logoforbrowser.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap core CSS -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="/css/home.css" rel="stylesheet">
+  </head>
+  <body>
+
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img width="50px" height="40px" src="/icon/Logo.png">  BookXchange</a>
+
+        <form action="/search" method="POST" class="d-flex">
+          <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+
+
+        <div id="google_translate_element">
+          <!-- <button class="btn btn-primary " type="button">Translate</button> -->
+         </div>
+        <ul class="navbar-nav mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">Sign Up</a>
+          </li>
+        </ul>
+
+
+
+
+
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-gradient" >
+    <div class="container-fluid ">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/categories/Horror" style="margin-left: 30vw" >Horror  |</a>
+        </li>
+        <li class="nav-item">
+              <a class="nav-link" href="/categories/Sci-Fi">Sci-Fi |</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/categories/Adventure">Adventure |</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/categories/Romance">Romance |</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/categories/Mathematics">Mathematics |</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/categories/Chemistry">Chemistry |</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/categories/Physics">Physics </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><button class="btn" type="button"><img src="https://img.icons8.com/fluent-systems-filled/24/ffffff/data-setting.png"/></button></a>
+      </ul>
+    </div>
+  </nav>
+
+</header>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner dancingfont">
+      <div class="carousel-item active">
+        <img src="/images/homecarousel1.jpg" class="img-fluid">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Welcome to the one stop solution of your books.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+
+        <img src="/images/homecarousel2.jpg" class="img-fluid">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1 style="font-size: 8vw;">Witness the biggest book collection anyone can access.</h1>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+
+        <img src="/images/homecarousel3.jfif" class="img-fluid">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>So, why to wait ? Register Now for free!!!</h1>
+            <p><a class="btn btn-lg btn-primary" href="/register" role="button">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+  <div class="row">
+    <h2>Top Deals for the day!!</h2>
+      <% books.forEach(function(book) { %>
+    <div class="card mx-auto" style="width: 18rem;">
+      <img src="data:image1/<%=book.image1.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+      <div class="card-body">
+        <h3><%=book.name%></h3>
+        <p class="card-text"><%=book.description%></p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+          </div>
+          <small class="text-muted">9 mins</small>
+        </div>
+      </div>
+
+    </div>
+    	<% }) %>
+
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Start Earning with your books.<span class="text-muted">So, Let's Earn and Learn together!</span></h2>
+        <p class="lead">Become a Renter with us. Wipe the dust of your books and post them on our portal. Let your books Earn for you and make someone Learn as well.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="/images/homefeature1.jpg" width="500px" height="500px" class="img-fluid">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Innovative credit system to manage your earning.<span class="text-muted">Get ready to fill your pockets.</span></h2>
+        <p class="lead">Wanted to Earn but were not able to get where to start? No worries.. start renting your books which are of no use to you but useful for others. Access your credit points in your wallet to Earn and get books when you need them.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="/images/homefeature2.jpg" width="500px" height="500px" class="img-fluid">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Door to door delivery. <span class="text-muted">Study peacefully at home.</span></h2>
+        <p class="lead">We are having both options available for the users, either they can pick the books from the renter or can give us the opportunity to serve them and deliver it.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="/images/homefeature3.jpg" width="500px" height="500px" class="img-fluid">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+
+  <%- include('partials/footer') %>

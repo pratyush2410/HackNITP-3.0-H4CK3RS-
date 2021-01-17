@@ -9,7 +9,7 @@
     <title>Checkout Page</title>
 
 
-    
+
 
     <!-- Bootstrap core CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -30,16 +30,16 @@
       }
     </style>
 
-    
+
     <!-- Custom styles for this template -->
-    <link href="checkout.css" rel="stylesheet">
+    <link href="/css/checkout.css" rel="stylesheet">
   </head>
   <body background="BG.jpg">
-    
+
 <div class="container rounded mx-auto my-2" style="background-color: #bedcfa;">
   <main>
     <div class="py-5 text-center">
-      <img class="d-block mx-auto mb-4" src="logo.png" alt="">
+      <img class="d-block mx-auto mb-4" src="/images/logo.png" alt="">
       <h2><strong>Checkout</strong></h2>
     </div>
 
@@ -79,25 +79,51 @@
             <span class="text-success">−$5</span>
           </li>
           <li class="list-group-item d-flex justify-content-between">
-            <span>Total (USD)</span>
-            <strong>$20</strong>
+            <span>Total USD</span>
+            <input type=text id=order-amt class="form-control1" >
           </li>
+          <button id="order-button1" class="w-30 btn btn-primary btn-md" type="submit">Get Order ID</button>
         </ul>
+
+        <script>
+
+          document.getElementById('order-button1').onclick = function(e){
+         var url = '/api/payment/order';
+             var params = {
+           amount: document.getElementById('order-amt').value*100,
+           currency: "INR",
+           receipt: "su001",
+           payment_capture: '1'
+         };
+
+         var xmlHttp = new XMLHttpRequest();
+         xmlHttp.onreadystatechange = function (res) {
+             if (xmlHttp.readyState === 4) {
+               res=JSON.parse(xmlHttp.responseText);
+               document.getElementById('rzp-text').value=res.sub.id;
+             }
+         }
+         xmlHttp.open("POST", url, true); // false for synchronous request
+         xmlHttp.setRequestHeader("Content-type", "application/json");
+         xmlHttp.send(JSON.stringify(params));
+         }
+         </script>
 
         <form class="card p-2">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Promo code">
+            <input type="text" class="form-control" placeholder="BookXchange">
             <button type="submit" class="btn btn-secondary">Redeem</button>
           </div>
         </form>
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Billing address</h4>
-        <form class="needs-validation" novalidate>
+        <!-- ------FORM -->
+        <form class="needs-validation" method="GET" action="/success" novalidate>
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <input type="text" class="form-control" id="firstName" placeholder=""  required value="<%=fname%>" >
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
@@ -105,26 +131,26 @@
 
             <div class="col-sm-6">
               <label for="lastName" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <input type="text" class="form-control" value="<%=lname%>" id="lastName" placeholder=""  required>
               <div class="invalid-feedback">
                 Valid last name is required.
               </div>
             </div>
 
-            <div class="col-12">
+            <!-- <div class="col-12">
               <label for="username" class="form-label">Username</label>
               <div class="input-group">
                 <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                <input type="text" class="form-control" id="username" placeholder="Username" required >
               <div class="invalid-feedback">
                   Your username is required.
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <div class="col-12">
-              <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com" value="<%=username%>" >
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
@@ -132,20 +158,20 @@
 
             <div class="col-12">
               <label for="address" class="form-label">Address</label>
-              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St"   required value="<%=address%>" >
               <div class="invalid-feedback">
                 Please enter your shipping address.
               </div>
             </div>
 
-            <div class="col-12">
+            <!-- <div class="col-12">
               <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
               <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
             </div>
 
             <div class="col-md-5">
               <label for="country" class="form-label">Country</label>
-              <select class="form-select" id="country" required>
+              <select class="form-select" id="country"  required>
                 <option value="">Choose...</option>
                 <option>United States</option>
               </select>
@@ -156,7 +182,7 @@
 
             <div class="col-md-4">
               <label for="state" class="form-label">State</label>
-              <select class="form-select" id="state" required>
+              <select class="form-select" id="state"   required>
                 <option value="">Choose...</option>
                 <option>California</option>
               </select>
@@ -167,28 +193,28 @@
 
             <div class="col-md-3">
               <label for="zip" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <input type="text" class="form-control" id="zip" placeholder=""   required>
               <div class="invalid-feedback">
                 Zip code required.
               </div>
             </div>
-          </div>
+          </div> -->
 
           <hr class="my-4">
 
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="same-address">
+            <input type="checkbox" class="form-check-input" id="same-address" checked>
             <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
           </div>
 
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="save-info">
+            <input type="checkbox" class="form-check-input" id="save-info" checked>
             <label class="form-check-label" for="save-info">Save this information for next time</label>
           </div>
 
           <hr class="my-4">
 
-          <h4 class="mb-3">Payment</h4>
+          <!-- <h4 class="mb-3">Payment</h4>
 
           <div class="my-3">
             <div class="form-check">
@@ -238,16 +264,79 @@
                 Security code required
               </div>
             </div>
+          </div> -->
+
+          <!-- <hr class="my-4"> -->
+          <div class="col-sm-6 paymentDetails">
+            <label for="firstName" class="form-label">Order ID <input type=text class="form-control" id=rzp-text /></label>
           </div>
+          <button class="w-100 btn btn-primary btn-lg" id="rzp-button1" type="submit">Continue to checkout</button>
+          <br>
+          <br>
+          <br>
+          <div class="col-sm-6 paymentDetails" >
+            <label  class="form-label">Payment ID <input type=text class="form-control" id=order-pay-id /></label>
 
-          <hr class="my-4">
+          </div>
+          <div class="col-sm-6 paymentDetails" ><label  class="form-label">Signature <input type=text class="form-control" id="order-sig"  /></label></div>
+          <button class="w-70 btn btn-primary btn-lg" id="verify-button1" type="submit" >Verify</button>
 
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+
         </form>
       </div>
     </div>
   </main>
 
+  <div id=paymentDetails></div>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+
+
+
+  document.getElementById('rzp-button1').onclick = function(e){
+      var options = {
+      "key":"rzp_test_ItkWPnw4LP6mMZ",  //Enter your razorpay key
+      "currency": "INR",
+      "name": "Razor Tutorial",
+      "description": "Razor Test Transaction",
+      "image": "https://previews.123rf.com/images/subhanbaghirov/subhanbaghirov1605/subhanbaghirov160500087/56875269-vector-light-bulb-icon-with-concept-of-idea-brainstorming-idea-illustration-.jpg",
+      "order_id": document.getElementById('rzp-text').value,
+      "handler": function (response){
+          document.getElementById('order-pay-id').value=response.razorpay_payment_id;
+   document.getElementById('order-id').value=response.razorpay_order_id;
+    document.getElementById('order-sig').value=response.razorpay_signature;
+      },
+      "theme": {
+          "color": "#3399cc"
+      }
+  };
+      var rzp1 = new Razorpay(options);
+      rzp1.open();
+      e.preventDefault();
+  }
+  </script>
+
+
+
+<script>
+document.getElementById('verify-button1').onclick = function(e){
+var url = '/api/payment/verify';
+    var params = {
+  razorpay_order_id:  document.getElementById('order-id').value,
+  razorpay_payment_id:  document.getElementById('order-pay-id').value,
+  razorpay_signature:  document.getElementById('order-sig').value
+};
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.onreadystatechange = function (res) {
+    if (xmlHttp.readyState === 4) {
+alert(xmlHttp.responseText);
+    }
+}
+xmlHttp.open("POST", url, true); // false for synchronous request
+xmlHttp.setRequestHeader("Content-type", "application/json");
+xmlHttp.send(JSON.stringify(params));
+}
+</script>
   <footer class="my-5 pt-5 text-muted text-center text-small" style="padding:5vw;">
     <p class="mb-1">&copy; 2017–2020 Book Adda</p>
     <ul class="list-inline">
@@ -261,6 +350,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-      <script src="checkout.js"></script>
+      <script src="/JS/checkout.js"></script>
   </body>
 </html>

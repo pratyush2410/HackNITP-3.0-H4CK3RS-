@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="walletPage.css">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Wallet page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+
+<!-------------------------------------------------- Bootstrap core CSS --------------------------------------------------------------->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+<!------------------------------------------------------NAVBAR COLLAPSABLE-------------------------------------------------------------->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img width="50px" height="40px" src="/icon/Logo.png">  BookXchange</a>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+      <button class="btn btn-primary" type="button">Translate</button>
+
+  </div>
+</nav>
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-gradient">
+  <div class="container-fluid">
+    <button class="openbtn btn btn-outline-light" type="button" onclick="openNav()">☰</button>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/categories/Horror" >Horror  |</a>
+      </li>
+      <li class="nav-item">
+            <a class="nav-link" href="/categories/Sci-Fi">Sci-Fi |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories/Adventure">Adventure |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories/Romance">Romance |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories/Mathematics">Mathematics |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories/Chemistry">Chemistry |</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories/Physics">Physics </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#"><button class="btn" type="button"><img src="https://img.icons8.com/fluent-systems-filled/24/ffffff/data-setting.png"/></button></a>
+    </ul>
+  </div>
+</nav>
+
+<!--------------------------------------------------------------main-------------------------------------------------------------------->
+
+<main>
+  <div class="row">
+    <div class="col-sm-6 card-body">
+          <div class="container">
+            <img src="card.png"  width="100%" alt="Card image cap">
+            <div class="centered ccdetails">1234567890</div>
+            <div class="bottom-left ccdetails">Shashwat Awasthi<br>
+            Managing Director</div>
+            </div>
+
+    </div>
+    <div class="col-sm-6">
+      <div class="container">
+        <p class="ccdetails" style="color: black; margin-top: 2vw;">Your Wallet Balence is:</p>
+        <p class="ccdetails" style="color: black;">&#8377; 0.00</p>
+        <button class="btn btn-primary twinbtn">+ Add Money</button>
+        <button class="btn btn-primary twinbtn">- Withdraw</button>
+
+      </div>
+    </div>
+  </div>
+<hr style="width:50%;margin-left:29vw">
+  <div class ="row text-center">
+    <h1 class="ccdetails">View your cart:</h1>
+  </div>
+  <div class="card border-primary ccdetails" style="width:70vw;margin-left:15vw;margin-bottom: 5vw;"><div class="card-body">
+  <ul class="list-group list-group-flush">
+    <% cartBooks.forEach(function(book) { %>
+    <li class="list-group-item">
+    <div class="row">
+      <div class="col col-md-3">
+      <img class="img-fluid list-img" src="data:image1/<%=book.image1.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="100px">
+      </div>
+        <div class="col col-md-6">
+
+<div class="row">
+  <h1><%=book.name%></h1>
+<h3><%=book.setPrice%></h3>
+<p><button class="btn btn-success">Ratings</button></p>
+</div>
+
+      </div>
+      <div class="col col-md-2">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">View Details</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%=book.description%></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="details">
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img class="detail-img img-fluid d-block w-100" src="data:image1/<%=book.image1.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img class="detail-img img-fluid d-block w-100" src="data:image2/<%=book.image2.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+              </div>
+              <div class="carousel-item">
+                <img class="detail-img img-fluid d-block w-100" src="data:image3/<%=book.image3.contentType%>;base64,<%=book.image1.data.toString('base64')%>"height="400">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+          <hr>
+          <h3><%=book.name%></h3>
+          <p><%=book.description%><br>
+            Shashwat <br>
+            Pratyush<br>
+            Lakhan<br>
+            Kshitiz<br>
+            Shashwat <br>
+            Pratyush<br>
+            Lakhan<br>
+            Kshitiz<br>
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back to cart</button>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </li>
+  <% }) %>
+
+  </ul>
+</div>
+</div>
+<div class="row ccdetails" >
+  <div class="col-lg-6"></div>
+  <div class="col-lg-6">total Amount: &#8377; 200 <a href="/payment"><button type="button" class="btn btn-dark">Proceed to checkout</button></a></div>
+
+</div>
+
+
+
+
+</main>
+<!------------------------------------------------------------Log OUt------------------------------------------------------------------->
+<a href="/logout">
+<div class="log-out"><button class="btn btn-primary twinbtn">Log Out</button></div></a>
+
+<!---------------------------------------------------------------FOOTER----------------------------------------------------------------->
+<div class="bg-danger bg-gradient scroll-link">
+  <button class=" btn btn-outline-light btn-gradient">
+    <a class="scroll-link-btn-anc" href="#">Back to top</a>
+  </button>
+</div>
+
+<footer class="text-muted py-5 bg-dark bg-gradient">
+  <div class="container">
+    <p class="float-end mb-1">
+
+    </p>
+    Book Adda
+  </div>
+</footer>
+
+  <!---------------------------------------------------------------JAVASCRIPTS---------------------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="Dashboard_Design.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

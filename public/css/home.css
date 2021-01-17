@@ -116,8 +116,7 @@ h1{
 
 /* Google Translate */
 #google_translate_element{
-  margin-top: 13px;
-  padding-top: 11px;
+  margin-top: 14px;
   /* padding-bottom: 10px; */
 }
 #google_translate_element {position:relative}
@@ -136,7 +135,7 @@ h1{
         }
         
         #google_translate_element select {
-        padding: 11px;
+          padding: 5px 2px 11px 11px;
         
         }
         
