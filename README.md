@@ -43,9 +43,9 @@ This site provides a way to help the in terms of `buying` and `selling` books at
 
 The details such as `Name`, `Tagline`, `Dev Platforms Username`, `Current Work`, `Portfolio`, etc. with a minimal UI.
 
-- **React+NODE**
-
 - **G translate API**
+
+- **Renter and Rentee's**
 
 - **JS Graphs implementation**
 
@@ -57,26 +57,28 @@ The details such as `Name`, `Tagline`, `Dev Platforms Username`, `Current Work`,
 
 - **Security**
 
+- **Payment Gateway**
+
 Click on `Generate README` to get your README in `markdown`.
 You can preview the README too.
 
 ## 🛠️ Installation Steps
-###  Create React-App.
-  1. Create React-app
+###  npm.
+  1. open Terminal in VScode or atom and clone
 
 ```bash
-  npx create-react-app my-app
+  git clone https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-
 ```
 
-  2. Change the working directory
+  2. Install packages
 
 ```bash
-  cd my-app
+  npm install
 ```
   3. Run the app
 
 ```bash
-  npm start
+  node server.js
 ```
 
 🌟 You are all set!
