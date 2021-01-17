@@ -3,10 +3,10 @@
 
   
   <h1 align="center" border-left="5px">
-    <span class="avatar" >
-  <img src="https://github.com/github.png" width="25px"></span> HackNITP-3.0
+    <img align="right" alt="GIF" height="60px" src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" />
+    HackNITP-3.0
   <br>
-  H4CK3RS
+  H4CK3RS<img src="https://media.giphy.com/media/9S3FMee8gGGRBhZsA7/giphy.gif" width="36px">
 </h1>
 
 
@@ -52,13 +52,13 @@ We are creating a portal that will work as a decentralized library system, Many 
 
 ## 🧐 Features and Goals
 
-The details such as `Name`, `Tagline`, `Dev Platforms Username`, `Current Work`, `Portfolio`, etc. with a minimal UI.
+The details such as `Name`, `Dynamic-stats`, `Dev Platforms Username`, `Current Work`, `Portfolio`, etc. with a minimal UI.
 
-- **React+NODE**
+- **EJS templating**
 
 - **G translate API**
 
-- **JS Graphs implementation**
+- **Renter and Rentee's**
 
 - **Dynamic Data Stats**
 
@@ -68,26 +68,31 @@ The details such as `Name`, `Tagline`, `Dev Platforms Username`, `Current Work`,
 
 - **Security**
 
-Click on `Generate README` to get your README in `markdown`.
-You can preview the README too.
+- **Payment Gateway**
+
 
 ## 🛠️ Installation Steps
-###  Create React-App.
-  1. Create React-app
+###  <code><img height="20" src="https://github.com/npm/logos/blob/master/npm%20logo/npm-logo-red.png"></code>
+  1. open Terminal and clone the repo
 
 ```bash
-  npx create-react-app my-app
+  git clone https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-
 ```
-
-  2. Change the working directory
-
+ 2. cd over 
+ 
 ```bash
-  cd my-app
+   cd HackNITP-3.0-H4CK3RS-
 ```
-  3. Run the app
+  3. Install packages and dependencies
 
 ```bash
-  npm start
+  npm install
+```
+ 
+  4. Run the app
+
+```bash
+  node server.js
 ```
 
 🌟 You are all set!
