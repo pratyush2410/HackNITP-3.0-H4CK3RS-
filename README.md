@@ -14,16 +14,16 @@
 <p align="center">
 
 <a href="https://github.com/Lakhankumawat/HackNITP-3.0/fork" target="blank">
-<img src="https://img.shields.io/github/forks/Lakhankumawat/HackNITP-3.0?style=flat-square" alt="HackNITP-3.0 forks"/>
+<img src="https://img.shields.io/github/forks/pratyush2410/HackNITP-3.0-H4CK3RS-?style=flat-square" alt="HackNITP-3.0 forks"/>
 </a>
 <a href="https://github.com/Lakhankumawat/HackNITP-3.0/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/Lakhankumawat/HackNITP-3.0?style=flat-square" alt="HackNITP-3.0 stars"/>
+<img src="https://img.shields.io/github/stars/pratyush2410/HackNITP-3.0-H4CK3RS-?style=flat-square" alt="HackNITP-3.0 stars"/>
 </a>
 <a href="https://github.com/Lakhankumawat/HackNITP-3.0/issues" target="blank">
-<img src="https://img.shields.io/github/issues/Lakhankumawat/HackNITP-3.0?style=flat-square" alt="HackNITP-3.0issues"/>
+<img src="https://img.shields.io/github/issues/pratyush2410/HackNITP-3.0-H4CK3RS-?style=flat-square" alt="HackNITP-3.0issues"/>
 </a>
 <a href="https://github.com/Lakhankumawat/HackNITP-3.0/pulls" target="blank">
-<img src="https://img.shields.io/github/issues-pr/Lakhankumawat/HackNITP-3.0?style=flat-square" alt="HackNITP-3.0 pull-requests"/>
+<img src="https://img.shields.io/github/issues-pr/pratyush2410/HackNITP-3.0-H4CK3RS-?style=flat-square" alt="HackNITP-3.0 pull-requests"/>
 </a>
 </p>
 
@@ -38,6 +38,10 @@ This site provides a way to help the in terms of `buying` and `selling` books at
 <a href="https://Lakhankumawat.github.io/HackNITP-3.0" target="blank">
 <img src="https://img.shields.io/website?url=https%3A%2F%2FLakhankumawat.github.io%2FHackNITP-3.0&logo=github&style=flat-square" />
 </a>
+
+# [YouTube](https://youtu.be/TFSrtfGGBME)<a href="https://youtu.be/TFSrtfGGBME"><img src="https://edent.github.io/SuperTinyIcons/images/svg/youtube.svg" width="40" title="YouTube" /></a>
+# [Google Docs](https://docs.google.com/presentation/d/e/2PACX-1vQh3TaLe3UCLvx1zZMOU5VU_YiSwvXStfBHsE3WjbGGGxmPnsVqLZkJo5ysdohLyQ/pub?start=false&loop=false&delayms=3000)<a href="https://docs.google.com/presentation/d/e/2PACX-1vQh3TaLe3UCLvx1zZMOU5VU_YiSwvXStfBHsE3WjbGGGxmPnsVqLZkJo5ysdohLyQ/pub?start=false&loop=false&delayms=3000"><img src="https://edent.github.io/SuperTinyIcons/images/svg/google_docs_editors.svg" width="60" title="Google Docs Editors" /></a>
+
 
 ## 🧐 Features and Goals
 
