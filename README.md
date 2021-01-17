@@ -36,25 +36,25 @@ This site provides a way to help the in terms of `buying` and `selling` books at
 ## 🚀 Demo 
 **Watch our progress**<br><br>
 <img align="right" src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=pratyush2410&repo=HackNITP-3.0-H4CK3RS-&countColorcountColor&countColor=%237B1E7B"/>
-<a href="https://Lakhankumawat.github.io/HackNITP-3.0" target="blank">
-<img src="https://img.shields.io/website?url=https%3A%2F%2FLakhankumawat.github.io%2FHackNITP-3.0&logo=github&style=flat-square" />
+<a href="https://pratyush2410.github.io/HackNITP-3.0-H4CK3RS-" target="blank">
+<img src="https://img.shields.io/website?url=https%3A%2F%2Fpratyush2410.github.io%2FHackNITP-3.0-H4CK3RS-&logo=github&style=flat-square" />
 </a>
 
 
 
 ## 🧐 Features and Goals
 
-The details such as `Name`, `Tagline`, `Dev Platforms Username`, `Current Work`, `Portfolio`, etc. with a minimal UI.
+The details such as `Platform`, `Tagline`, `Username`, `Work`, `Portfolio`, etc. with a minimal UI.
+
+- **Dynamic Data Stats**
+
+- **EJS templating**
 
 - **G translate API**
 
 - **Renter and Rentee's**
 
-- **JS Graphs implementation**
-
-- **Dynamic Data Stats**
-
-- **Wakatime Stats** [contribute](https://github.com/Lakhankumawat/HackNITP-3.0/issues/115)
+- **Wakatime Stats** [contribute](https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-/issues/115)
 
 - **User Stats Cards**
 
@@ -62,23 +62,25 @@ The details such as `Name`, `Tagline`, `Dev Platforms Username`, `Current Work`,
 
 - **Payment Gateway**
 
-Click on `Generate README` to get your README in `markdown`.
-You can preview the README too.
 
 ## 🛠️ Installation Steps
-###  npm.
-  1. open Terminal in VScode or atom and clone
+###  <code><img height="20" src="https://github.com/npm/logos/blob/master/npm%20logo/npm-logo-red.png"></code>
+  1. open Terminal and clone the repo
 
 ```bash
   git clone https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-
 ```
+ 2. cd over 
 
-  2. Install packages
+```bash
+   cd HackNITP-3.0-H4CK3RS-
+```
+  3. Install packages and dependencies
 
 ```bash
   npm install
 ```
-  3. Run the app
+  4. Run the app
 
 ```bash
   node server.js
@@ -88,7 +90,7 @@ You can preview the README too.
 
 ## 🍰 Contributing
 
-Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/Lakhankumawat/HackNITP-3.0/compare).
+Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-/compare).
 
 Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
