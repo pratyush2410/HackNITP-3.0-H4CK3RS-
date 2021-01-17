@@ -4,7 +4,7 @@
   
   <h1 align="center" border-left="5px">
     <span class="avatar" >
-  <img src="https://github.com/github.png" width="25px"></span> HackNITP-3.0
+  <img align="right" alt="GIF" height="60px" src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" /> HackNITP-3.0
   <br>
   H4CK3RS
 </h1>
@@ -35,9 +35,12 @@ This site provides a way to help the in terms of `buying` and `selling` books at
 
 ## 🚀 Demo 
 **Watch our progress**<br><br>
+<img align="right" src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=pratyush2410&repo=HackNITP-3.0-H4CK3RS-&countColorcountColor&countColor=%237B1E7B"/>
 <a href="https://Lakhankumawat.github.io/HackNITP-3.0" target="blank">
 <img src="https://img.shields.io/website?url=https%3A%2F%2FLakhankumawat.github.io%2FHackNITP-3.0&logo=github&style=flat-square" />
 </a>
+
+
 
 ## 🧐 Features and Goals
 
@@ -99,6 +102,7 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 
 
 <hr>
+
 <p align="center">
 Developed with ❤️ in India 🇮🇳 
 </p>
