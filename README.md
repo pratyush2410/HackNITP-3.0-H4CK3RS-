@@ -32,6 +32,8 @@
 
 This site provides a way to help the in terms of `buying` and `selling` books at rents lower than `Market Prices` etc.
 
+We are creating a portal that will work as a decentralized library system, Many times we find ourselves with books and textbook that we don't need anymore but at the same time in the same city there is someone who wants the same books but cannot afford it, our portal will connect the two people and help them issue books to each other at small fee.
+
 
 ## <img src="https://github.com/LakhanKumawat/LakhanKumawat/blob/master/Assets/Rocket.gif" width="22px"> Demo 
 **Watch our progress**<br><br>
@@ -94,14 +96,16 @@ Please contribute using [GitHub Flow](https://guides.github.com/introduction/flo
 
 Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
-## 💻 Built with
+## 💻 Tech Stack
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/5c058a388828bb5fde0bcafd4bc867b5bb3f26f3/topics/css/css.png"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png"></code>
-<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png"></code>
-
+<code><img width="50" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png"></code>
+<code><img height="25" src="https://i.cloudup.com/zfY6lL7eFa-3000x3000.png"></code>
+<code><img height="30" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png"></code>
+<code><img height="30" src="https://github.com/Lakhankumawat/LakhanKumawat/blob/master/Assets/images.png"></code>
 
 <hr>
 
