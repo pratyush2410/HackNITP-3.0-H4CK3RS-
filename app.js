@@ -69,14 +69,25 @@ const productSchema= new mongoose.Schema({
   //   max:5,
   // },
   // owner:userSchema,
-  image:{
+  image1:{
         data: Buffer,
         contentType: String
     },
   image2:{
         data: Buffer,
         contentType: String
-    }
+    },
+  image3:{
+        data: Buffer,
+        contentType: String
+    },
+  // image2:{
+  //       data: Buffer,
+  //       contentType: String
+  //   }
+  // images: [image{
+  //   data:{ty}
+  // }],
 });
 
 
@@ -122,15 +133,17 @@ passport.deserializeUser(User.deserializeUser());
 
 
 var storage = multer.diskStorage({
+
     destination: (req, file, cb) => {
         cb(null, 'uploads')
     },
     filename: (req, file, cb) => {
+      console.log(file);
         cb(null, file.fieldname + '-' + Date.now()+ file.originalname);
     }
 });
 
-var upload = multer({ storage: storage });
+var upload = multer({ storage: storage }).array("image",4);
 
 
 const Product = new mongoose.model("Product",productSchema);
@@ -138,7 +151,7 @@ const Product = new mongoose.model("Product",productSchema);
 
 //TODO
 app.get("/",function (req,res) {
-  res.render("home");
+  res.render("home2");
 })
 
 
@@ -150,20 +163,51 @@ app.get("/register",function (req,res) {
   res.render("regForm");
 })
 
+app.get("/wallet",function (req,res) {
+  if (req.isAuthenticated()){
+  res.render("walletPage");
+}
+else {
+  res.redirect("login");
+}
+})
+
+
+
+
+app.get("/editProfile",function (req,res) {
+  if (req.isAuthenticated()){
+  res.render("editProfile");
+}
+else {
+  res.redirect("login");
+}
+})
+
+
+
 
 app.get("/browse",function (req,res) {
-  res.render("productListing");
+  Product.find({}, (err, books) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+          res.render("productList",{books:books});
+        }
+});
+
 })
 
 
 app.get("/rentedBooks",function (req,res) {
   if (req.isAuthenticated()){
-    Product.find({}, (err, items) => {
+    Product.find({}, (err, books) => {
           if (err) {
               console.log(err);
           }
           else {
-              res.render('RentPage', {name: req.user.name});
+              res.render('RentPage2', {name: req.user.name, books:books});
           }
   });
 }
@@ -175,9 +219,16 @@ app.get("/rentedBooks",function (req,res) {
 
 
 
-app.post('/rentedBooks', upload.single('image'), (req, res, next) => {
-  console.log(req.file.filename);
+app.post('/rentedBooks', (req, res, next) => {
+  upload(req,res,function (err) {
+    if(err){console.log(err);}
+    else {
+
+  console.log(req.files);
     //console.log(req.user);
+    console.log(req.files[0].filename);
+    console.log(req.files[1].filename);
+    console.log(req.files[2].filename);
     var obj = new Product({
         username: req.user._id + req.body.name,
         name: req.body.name,
@@ -188,8 +239,16 @@ app.post('/rentedBooks', upload.single('image'), (req, res, next) => {
         age:req.body.age,
         publicationYear: req.body.publicationYear,
         //timeLimit:req.body.
-        image: {
-            data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
+        image1: {
+            data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.files[0].filename)),
+            contentType: 'image/png'
+        },
+        image2: {
+            data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.files[1].filename)),
+            contentType: 'image/png'
+        },
+        image3: {
+            data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.files[2].filename)),
             contentType: 'image/png'
         },
         // image2:{
@@ -215,7 +274,8 @@ app.post('/rentedBooks', upload.single('image'), (req, res, next) => {
         console.log(err);
       }
     })
-
+  }
+  });
 });
 
 
@@ -262,6 +322,7 @@ app.post("/login",function (req,res) {
     req.login(user, function (err) {
       if (err){
         console.log(err);
+        // res.send("alert("your alert message"), window.location.href = "/login"; ");
       }
       else {
         passport.authenticate("local")(req,res,function () {
