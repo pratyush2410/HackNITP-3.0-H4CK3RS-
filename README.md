@@ -47,8 +47,8 @@ We are creating a portal that will work as a decentralized library system, Many 
 </a>
 <img align="right" src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=pratyush2410&repo=HackNITP-3.0-H4CK3RS-&countColorcountColor&countColor=%237B1E7B"/>
 
-# [YouTube](https://youtu.be/TFSrtfGGBME)<a href="https://youtu.be/TFSrtfGGBME"><img src="https://edent.github.io/SuperTinyIcons/images/svg/youtube.svg" width="40" title="YouTube" /></a>
-# [Google Docs](https://docs.google.com/presentation/d/e/2PACX-1vQh3TaLe3UCLvx1zZMOU5VU_YiSwvXStfBHsE3WjbGGGxmPnsVqLZkJo5ysdohLyQ/pub?start=false&loop=false&delayms=3000)<a href="https://docs.google.com/presentation/d/e/2PACX-1vQh3TaLe3UCLvx1zZMOU5VU_YiSwvXStfBHsE3WjbGGGxmPnsVqLZkJo5ysdohLyQ/pub?start=false&loop=false&delayms=3000"><img src="https://edent.github.io/SuperTinyIcons/images/svg/google_docs_editors.svg" width="60" title="Google Docs Editors" /></a>
+# [YouTube ](https://youtu.be/TFSrtfGGBME)<a href="https://youtu.be/TFSrtfGGBME"><img src="https://edent.github.io/SuperTinyIcons/images/svg/youtube.svg" width="35" title="YouTube" /></a>
+# [Google Docs ](https://docs.google.com/presentation/d/e/2PACX-1vQh3TaLe3UCLvx1zZMOU5VU_YiSwvXStfBHsE3WjbGGGxmPnsVqLZkJo5ysdohLyQ/pub?start=false&loop=false&delayms=3000)<a href="https://docs.google.com/presentation/d/e/2PACX-1vQh3TaLe3UCLvx1zZMOU5VU_YiSwvXStfBHsE3WjbGGGxmPnsVqLZkJo5ysdohLyQ/pub?start=false&loop=false&delayms=3000"><img src="https://edent.github.io/SuperTinyIcons/images/svg/google_docs_editors.svg" width="50" title="Google Docs Editors" /></a>
 
 
 ## 🧐 Features and Goals
@@ -96,7 +96,20 @@ The details such as `Name`, `Dynamic-stats`, `Dev Platforms Username`, `Current 
   node server.js
 ```
 
+5. open the browser
+
+```bash
+  locahost:3000
+```
 🌟 You are all set!
+
+- please click on Sign Up to be able to acccess.
+
+- Now after signing up you will be redirected to your desktop.
+
+- You can put a book on rent with details ,can buy a book or can search for a book and much more.
+
+- Enjoy BookXchange
 
 ## 🍰 Contributing
 
@@ -104,8 +117,14 @@ Please contribute using [GitHub Flow](https://guides.github.com/introduction/flo
 
 Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
+## <img src="https://media.giphy.com/media/lqwcYeLIvQSUcSf6nP/giphy.gif" alt="prerequisite" width="35px" > Prerequisites for OS
 
-## 💻 Tech Stack
+- [Node @latest](https://nodejs.org/en/)
+- [Npm @latest](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [MongoDB @latest](https://www.mongodb.com/try/download/community)
+
+
+## <img src="https://media.giphy.com/media/5ndklThG9vUUdTmgMn/giphy.gif" alt="prerequisite" width="38px" > Tech Stack
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/5c058a388828bb5fde0bcafd4bc867b5bb3f26f3/topics/css/css.png"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
