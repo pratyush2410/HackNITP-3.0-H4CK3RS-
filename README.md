@@ -42,9 +42,10 @@ We are creating a portal that will work as a decentralized library system, Many 
 
 ## <img src="https://github.com/LakhanKumawat/LakhanKumawat/blob/master/Assets/Rocket.gif" width="22px"> Demo 
 **Watch our progress**<br><br>
-<a href="https://Lakhankumawat.github.io/HackNITP-3.0" target="blank">
-<img src="https://img.shields.io/website?url=https%3A%2F%2FLakhankumawat.github.io%2FHackNITP-3.0&logo=github&style=flat-square" />
+<a href="https://pratyush2410.github.io/HackNITP-3.0-H4CK3RS-" target="blank">
+<img src="https://img.shields.io/website?url=https%3A%2F%2Fpratyush2410.github.io%2FHackNITP-3.0-H4CK3RS-&logo=github&style=flat-square" />
 </a>
+<img align="right" src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=pratyush2410&repo=HackNITP-3.0-H4CK3RS-&countColorcountColor&countColor=%237B1E7B"/>
 
 # [YouTube](https://youtu.be/TFSrtfGGBME)<a href="https://youtu.be/TFSrtfGGBME"><img src="https://edent.github.io/SuperTinyIcons/images/svg/youtube.svg" width="40" title="YouTube" /></a>
 # [Google Docs](https://docs.google.com/presentation/d/e/2PACX-1vQh3TaLe3UCLvx1zZMOU5VU_YiSwvXStfBHsE3WjbGGGxmPnsVqLZkJo5ysdohLyQ/pub?start=false&loop=false&delayms=3000)<a href="https://docs.google.com/presentation/d/e/2PACX-1vQh3TaLe3UCLvx1zZMOU5VU_YiSwvXStfBHsE3WjbGGGxmPnsVqLZkJo5ysdohLyQ/pub?start=false&loop=false&delayms=3000"><img src="https://edent.github.io/SuperTinyIcons/images/svg/google_docs_editors.svg" width="60" title="Google Docs Editors" /></a>
