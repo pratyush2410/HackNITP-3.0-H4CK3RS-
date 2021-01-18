@@ -77,7 +77,7 @@ The details such as `Name`, `Dynamic-stats`, `Dev Platforms Username`, `Current 
   1. open Terminal and clone the repo
 
 ```bash
-  git clone https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-
+  git clone https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-.git
 ```
  2. cd over 
  
