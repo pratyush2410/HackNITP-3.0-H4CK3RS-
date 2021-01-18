@@ -22,8 +22,8 @@ const passportLocalMongoose = require('passport-local-mongoose');
 
 
 let instance = new Razorpay({
-  key_id: process.env.KEY_ID, // your `KEY_ID`
-  key_secret:process.env.KEY_SECRET // your `KEY_SECRET`
+  key_id: "rzp_test_ItkWPnw4LP6mMZ", // your `KEY_ID`
+  key_secret:"yy8ID0bH2Xla0Og6CrkDppOr" // your `KEY_SECRET`
 });
 //console.log(process.env.API_KEY);
 
