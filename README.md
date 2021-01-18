@@ -17,16 +17,16 @@
 
 <p align="center">
 
-<a href="https://github.com/Lakhankumawat/HackNITP-3.0/fork" target="blank">
+<a href="https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-/fork" target="blank">
 <img src="https://img.shields.io/github/forks/pratyush2410/HackNITP-3.0-H4CK3RS-?style=flat-square" alt="HackNITP-3.0 forks"/>
 </a>
-<a href="https://github.com/Lakhankumawat/HackNITP-3.0/stargazers" target="blank">
+<a href="https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-/stargazers" target="blank">
 <img src="https://img.shields.io/github/stars/pratyush2410/HackNITP-3.0-H4CK3RS-?style=flat-square" alt="HackNITP-3.0 stars"/>
 </a>
-<a href="https://github.com/Lakhankumawat/HackNITP-3.0/issues" target="blank">
+<a href="https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-/issues" target="blank">
 <img src="https://img.shields.io/github/issues/pratyush2410/HackNITP-3.0-H4CK3RS-?style=flat-square" alt="HackNITP-3.0issues"/>
 </a>
-<a href="https://github.com/Lakhankumawat/HackNITP-3.0/pulls" target="blank">
+<a href="https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-/pulls" target="blank">
 <img src="https://img.shields.io/github/issues-pr/pratyush2410/HackNITP-3.0-H4CK3RS-?style=flat-square" alt="HackNITP-3.0 pull-requests"/>
 </a>
 </p>
