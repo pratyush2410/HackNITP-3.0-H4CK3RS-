@@ -111,7 +111,7 @@ The details such as `Name`, `Dynamic-stats`, `Dev Platforms Username`, `Current 
 
 - Enjoy BookXchange
 
-## 🍰 Contributing
+## <img src="https://media.giphy.com/media/Y3eZ2VA2b2UP5Lz6os/giphy.gif" alt="prerequisite" width="40px" > Contributing
 
 Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/Lakhankumawat/HackNITP-3.0/compare).
 
