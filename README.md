@@ -41,7 +41,7 @@ We are creating a portal that will work as a decentralized library system, Many 
 
 
 ## <img src="https://github.com/LakhanKumawat/LakhanKumawat/blob/master/Assets/Rocket.gif" width="22px"> Demo 
-**Watch our progress**<br><br>
+ <a href="https://www.linkedin.com/posts/lakhan-kumawat-7414391a2_html-css-javascript-activity-6764784472299851776-IhX2" >**Watch our progress**<br><br></a>
 <a href="https://pratyush2410.github.io/HackNITP-3.0-H4CK3RS-" target="blank">
 <img src="https://img.shields.io/website?url=https%3A%2F%2Fpratyush2410.github.io%2FHackNITP-3.0-H4CK3RS-&logo=github&style=flat-square" />
 </a>
