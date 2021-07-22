@@ -47,6 +47,8 @@ We are creating a portal that will work as a decentralized library system, Many 
 </a>
 <img align="right" src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=pratyush2410&repo=HackNITP-3.0-H4CK3RS-&countColorcountColor&countColor=%237B1E7B"/>
 
+
+# [LinkedIn ](https://www.linkedin.com/feed/update/urn:li:activity:6764784472299851776/)<a href="https://www.linkedin.com/feed/update/urn:li:activity:6764784472299851776/"><img src="https://image.flaticon.com/icons/png/512/174/174857.png" width="35" title="LinkedIn" /></a>
 # [YouTube ](https://youtu.be/TFSrtfGGBME)<a href="https://youtu.be/TFSrtfGGBME"><img src="https://edent.github.io/SuperTinyIcons/images/svg/youtube.svg" width="35" title="YouTube" /></a>
 # [Google Docs ](https://docs.google.com/presentation/d/e/2PACX-1vQh3TaLe3UCLvx1zZMOU5VU_YiSwvXStfBHsE3WjbGGGxmPnsVqLZkJo5ysdohLyQ/pub?start=false&loop=false&delayms=3000)<a href="https://docs.google.com/presentation/d/e/2PACX-1vQh3TaLe3UCLvx1zZMOU5VU_YiSwvXStfBHsE3WjbGGGxmPnsVqLZkJo5ysdohLyQ/pub?start=false&loop=false&delayms=3000"><img src="https://edent.github.io/SuperTinyIcons/images/svg/google_docs_editors.svg" width="50" title="Google Docs Editors" /></a>
 
