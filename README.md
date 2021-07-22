@@ -1,36 +1,7 @@
 
-
-
+![HackNITP-3.0-H4CK3RS-](https://socialify.git.ci/pratyush2410/HackNITP-3.0-H4CK3RS-/image?font=Bitter&forks=1&issues=1&language=1&logo=https%3A%2F%2Fi.ibb.co%2FCKzDLZS%2FBook-Xchange-1.png&owner=1&pattern=Plus&pulls=1&stargazers=1&theme=Dark)
   
-  <h1 align="center" border-left="5px">
-    <img align="right" alt="GIF" height="60px" src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" />
-    HackNITP-3.0
-  <br>
-  H4CK3RS<img src="https://media.giphy.com/media/9S3FMee8gGGRBhZsA7/giphy.gif" width="36px">
-</h1>
-
-
-
-
-
-
-
-<p align="center">
-
-<a href="https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-/fork" target="blank">
-<img src="https://img.shields.io/github/forks/pratyush2410/HackNITP-3.0-H4CK3RS-?style=flat-square" alt="HackNITP-3.0 forks"/>
-</a>
-<a href="https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/pratyush2410/HackNITP-3.0-H4CK3RS-?style=flat-square" alt="HackNITP-3.0 stars"/>
-</a>
-<a href="https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-/issues" target="blank">
-<img src="https://img.shields.io/github/issues/pratyush2410/HackNITP-3.0-H4CK3RS-?style=flat-square" alt="HackNITP-3.0issues"/>
-</a>
-<a href="https://github.com/pratyush2410/HackNITP-3.0-H4CK3RS-/pulls" target="blank">
-<img src="https://img.shields.io/github/issues-pr/pratyush2410/HackNITP-3.0-H4CK3RS-?style=flat-square" alt="HackNITP-3.0 pull-requests"/>
-</a>
-</p>
-
+<hr>
 
 ####  GitHub Profile README whats's included?
 
