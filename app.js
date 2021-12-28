@@ -54,7 +54,8 @@ app.use(passport.session());//tells passport to deal with the sessions
 
 
 
-mongoose.connect('mongodb://localhost:27017/customerDB', {useNewUrlParser: true, useUnifiedTopology: true});
+//Mongo DB Atlas connect
+mongoose.connect('mongodb+srv://admin-lakhan:Test123@cluster0.mwha7.mongodb.net/customerDB', {useNewUrlParser: true, useUnifiedTopology: true});
 
 mongoose.set("useCreateIndex",true);
 
@@ -534,9 +535,13 @@ app.get("/logout",function (req,res) {
 
 
 
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
-});
+const port = process.env.PORT || 3000;
+if(port ==null || port ==""){
+  port =3000;
+}
+
+app.listen(port, () => console.log(`Server is listening on port ${port}...`));
+
 
 
 
